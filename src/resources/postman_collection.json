@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "b7d9f5f4-cdaf-4350-978d-d4c9119334c3",
+		"name": "ARDIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30469453"
+	},
+	"item": [
+		{
+			"name": "api/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@org.com\",\r\n    \"position\": \"Manager\",\r\n    \"permissions\": [\r\n        \"USER_CREATE\", \"USER_READ\", \"USER_UPDATE\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/users?email=user1@org.com&position=Manager&page=1&per_page=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user1@org.com"
+						},
+						{
+							"key": "position",
+							"value": "Manager"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
