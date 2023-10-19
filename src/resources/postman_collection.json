@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"user1@org.com\",\r\n    \"position\": \"Manager\",\r\n    \"permissions\": [\r\n        \"USER_CREATE\", \"USER_READ\", \"USER_UPDATE\"\r\n    ]\r\n}",
+					"raw": "{\r\n    \"email\": \"user05@org.com\",\r\n    \"position\": \"Driver\",\r\n    \"permissions\": [\r\n        \"USER_READ\",\r\n        \"USER_UPDATE\"\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/users?email=user1@org.com&position=Manager&page=1&per_page=10",
+					"raw": "127.0.0.1:8000/api/users?email=@org.com&position=Director&page=1&per_page=10",
 					"host": [
 						"127",
 						"0",
@@ -58,11 +58,11 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "user1@org.com"
+							"value": "@org.com"
 						},
 						{
 							"key": "position",
-							"value": "Manager"
+							"value": "Director"
 						},
 						{
 							"key": "page",
@@ -72,6 +72,143 @@
 							"key": "per_page",
 							"value": "10"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/positions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/positions?title=er&page=1&per_page=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"positions"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "er"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/{user_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/users/f0adddc2-1ae3-49cf-b10a-612337baf1d2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"f0adddc2-1ae3-49cf-b10a-612337baf1d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/positions/{position_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/positions/1a76343d-67f4-4c5d-aa5b-7bea6af1bb33",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"positions",
+						"1a76343d-67f4-4c5d-aa5b-7bea6af1bb33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/{user_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/users/9ee2ae89-5ed2-4353-9531-e7215260ca1e",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"9ee2ae89-5ed2-4353-9531-e7215260ca1e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/{user_id}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"newUser13@org.com\",\r\n    \"position\": \"Translator\",\r\n    \"permissions\": [\r\n        \"USER_CREATE\",\r\n        \"USER_DELETE\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/users/a961bb1a-5d9e-4951-be9a-b182efbc2f1b",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"a961bb1a-5d9e-4951-be9a-b182efbc2f1b"
 					]
 				}
 			},
